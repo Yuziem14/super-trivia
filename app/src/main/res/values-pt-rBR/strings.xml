@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="authentication">Autenticação</string>
+    <string name="password">Senha</string>
+    <string name="sign_in">Entrar</string>
+    <string name="dont_have_an_account">Não tem uma conta?</string>
+    <string name="register">Registre-se</string>
+    <string name="name">Nome</string>
+    <string name="confirm_password">Confirmar Senha</string>
+    <string name="already_have_an_account">Já possui uma conta?</string>
+</resources>
