@@ -3,7 +3,7 @@ package com.yuziem14.supertrivia.models.errors
 data class RegisterError(
     var status: String,
     var data: Data,
-) {
+) : Error() {
     data class Data(
         val errors: Errors
     ) {
