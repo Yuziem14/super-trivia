@@ -32,7 +32,7 @@
         android:text="@string/confirm_password"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordErrorsText" />
 
     <TextView
         android:id="@+id/textView1"
@@ -57,7 +57,7 @@
         android:text="@string/email"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameInput" />
+        app:layout_constraintTop_toBottomOf="@+id/nameErrorsText" />
 
     <TextView
         android:id="@+id/textView4"
@@ -97,7 +97,7 @@
         android:text="@string/password"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+        app:layout_constraintTop_toBottomOf="@+id/emailErrorsText" />
 
     <EditText
         android:id="@+id/passwordInput"
@@ -127,7 +127,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordInput" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordErrorsText" />
 
     <TextView
         android:id="@+id/textView6"
@@ -168,5 +168,61 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/nameErrorsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#D11818"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/nameInput"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput"
+        tools:text="Name Errors"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/emailErrorsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#D11818"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/emailInput"
+        app:layout_constraintTop_toBottomOf="@+id/emailInput"
+        tools:text="Email Errors"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/passwordErrorsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#D11818"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/passwordInput"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput"
+        tools:text="Password Errors"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/confirmPasswordErrorsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#D11818"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/confirmPasswordInput"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordInput"
+        tools:text="Confirm Password Errors"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

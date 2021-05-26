@@ -8,4 +8,9 @@
     <string name="name">Nome</string>
     <string name="confirm_password">Confirmar Senha</string>
     <string name="already_have_an_account">Já possui uma conta?</string>
+    <string name="cant_be_blank">%1$s é obrigatório</string>
+    <string name="has_already_been_taken">%1$s já existente</string>
+    <string name="fields_mismatch">%1$s e %2$s não correspondem</string>
+    <string name="is_too_short">%1$s  é muito curto(a)</string>
+    <string name="is_invalid">%1$s é inválido</string>
 </resources>
