@@ -12,7 +12,12 @@
         tools:layout="@layout/fragment_auth" >
         <action
             android:id="@+id/authToRegister"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -21,6 +26,11 @@
         tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/registerToAuth"
-            app:destination="@id/authFragment" />
+            app:destination="@id/authFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

@@ -1,228 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.RegisterFragment">
 
-    <EditText
-        android:id="@+id/confirmPasswordInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="24dp">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/confirm_password"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordErrorsText" />
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/confirmPasswordErrorsText"
+            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordErrorsText" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/register"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/emailErrorsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#D11818"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/emailInput"
+            app:layout_constraintTop_toBottomOf="@+id/emailInput"
+            tools:text="Email Errors"
+            tools:visibility="visible" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/email"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameErrorsText" />
+        <TextView
+            android:id="@+id/confirmPasswordErrorsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#D11818"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/confirmPasswordInput"
+            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordInput"
+            tools:text="Confirm Password Errors"
+            tools:visibility="visible" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/name"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/confirm_password"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordErrorsText" />
 
-    <EditText
-        android:id="@+id/emailInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <EditText
+            android:id="@+id/nameInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/password"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailErrorsText" />
+        <EditText
+            android:id="@+id/confirmPasswordInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <EditText
-        android:id="@+id/passwordInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="@string/register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordErrorsText" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/email"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameErrorsText" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/already_have_an_account"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <TextView
-        android:id="@+id/authLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/sign_in"
-        android:textColor="#673AB7"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/name"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
-    <EditText
-        android:id="@+id/nameInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <TextView
+            android:id="@+id/passwordErrorsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#D11818"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/passwordInput"
+            app:layout_constraintTop_toBottomOf="@+id/passwordInput"
+            tools:text="Password Errors"
+            tools:visibility="visible" />
 
-    <TextView
-        android:id="@+id/nameErrorsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:textColor="#D11818"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@+id/nameInput"
-        app:layout_constraintTop_toBottomOf="@+id/nameInput"
-        tools:text="Name Errors"
-        tools:visibility="visible" />
+        <TextView
+            android:id="@+id/authLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:text="@string/sign_in"
+            android:textColor="#673AB7"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
 
-    <TextView
-        android:id="@+id/emailErrorsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:textColor="#D11818"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@+id/emailInput"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput"
-        tools:text="Email Errors"
-        tools:visibility="visible" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/register"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/passwordErrorsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:textColor="#D11818"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@+id/passwordInput"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInput"
-        tools:text="Password Errors"
-        tools:visibility="visible" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/password"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailErrorsText" />
 
-    <TextView
-        android:id="@+id/confirmPasswordErrorsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:textColor="#D11818"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@+id/confirmPasswordInput"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordInput"
-        tools:text="Confirm Password Errors"
-        tools:visibility="visible" />
+        <TextView
+            android:id="@+id/nameErrorsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#D11818"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/nameInput"
+            app:layout_constraintTop_toBottomOf="@+id/nameInput"
+            tools:text="Name Errors"
+            tools:visibility="visible" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/already_have_an_account"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/registerButton"
+            app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
