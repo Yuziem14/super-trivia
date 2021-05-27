@@ -13,4 +13,5 @@
     <string name="fields_mismatch">%1$s e %2$s não correspondem</string>
     <string name="is_too_short">%1$s  é muito curto(a)</string>
     <string name="is_invalid">%1$s é inválido</string>
+    <string name="invalid_credentials">Credenciais Inválidas</string>
 </resources>

@@ -15,5 +15,6 @@
     <string name="fields_mismatch">%1$s and %2$s don\'t match</string>
     <string name="is_too_short">%1$s is too short</string>
     <string name="is_invalid">%1$s is invalid</string>
+    <string name="invalid_credentials">Invalid Credentials</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
