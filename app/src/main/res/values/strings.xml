@@ -16,4 +16,6 @@
     <string name="is_invalid">%1$s is invalid</string>
     <string name="invalid_credentials">Invalid Credentials</string>
     <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="game_settings">Game Settings</string>
 </resources>
