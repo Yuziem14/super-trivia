@@ -17,4 +17,10 @@
     <string name="settings">Configurações</string>
     <string name="logout">Sair</string>
     <string name="game_settings">Configurações de Jogo</string>
+    <string name="difficulty">Dificuldade</string>
+    <string name="category">Categoria</string>
+    <string name="easy">Fácil</string>
+    <string name="medium">Médio</string>
+    <string name="hard">Difícil</string>
+    <string name="random">Aleatória</string>
 </resources>
