@@ -115,9 +115,12 @@ class SettingsFragment : Fragment() {
     }
 
     private fun logout() {
-        activity?.getSharedPreferences("auth", Context.MODE_PRIVATE)?.edit()?.apply {
-            clear()
-            apply()
+        listOf("auth", "settings").forEach {
+            pref ->
+                activity?.getSharedPreferences(pref, Context.MODE_PRIVATE)?.edit()?.apply {
+                    clear()
+                    apply()
+                }
         }
 
         goToLogin()
