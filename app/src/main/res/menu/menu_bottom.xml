@@ -4,4 +4,8 @@
         android:id="@+id/settingsFragment"
         android:icon="@drawable/ic_settings"
         android:title="@string/settings" />
+    <item
+        android:id="@+id/gameFragment"
+        android:icon="@drawable/ic_gamepad"
+        android:title="@string/game" />
 </menu>
