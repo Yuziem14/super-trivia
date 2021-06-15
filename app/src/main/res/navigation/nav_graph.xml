@@ -52,4 +52,9 @@
             android:id="@+id/gameover_to_settings"
             app:destination="@id/settingsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/rankingFragment"
+        android:name="com.yuziem14.supertrivia.fragments.RankingFragment"
+        android:label="fragment_ranking"
+        tools:layout="@layout/fragment_ranking" />
 </navigation>
