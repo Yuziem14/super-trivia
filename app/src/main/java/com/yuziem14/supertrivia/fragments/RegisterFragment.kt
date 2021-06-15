@@ -39,6 +39,13 @@ class RegisterFragment : Fragment() {
         return inflatedView
     }
 
+    fun clearErrors() {
+        this.inflatedView.nameErrorsText.visibility = View.GONE
+        this.inflatedView.emailErrorsText.visibility = View.GONE
+        this.inflatedView.passwordErrorsText.visibility = View.GONE
+        this.inflatedView.confirmPasswordErrorsText.visibility = View.GONE
+    }
+
     private fun validatePassword(password: String, confirmPassword: String): HashMap<String, String> {
         val errorsMap = HashMap<String, String>()
         val resources = context?.resources
@@ -61,6 +68,7 @@ class RegisterFragment : Fragment() {
     }
 
     private fun handleRegister(name: String, email: String, password: String, confirmPassword: String) {
+        clearErrors()
         val passwordErrors = validatePassword(password, confirmPassword)
         if(passwordErrors.isNotEmpty()) {
             if(passwordErrors["password"] != null) {

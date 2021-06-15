@@ -126,21 +126,27 @@ class SettingsFragment : Fragment() {
         GameDAO().destroy(
             getAuthToken(),
             {
-                response ->
-                listOf("auth", "settings", "game").forEach {
-                        pref ->
-                    activity?.getSharedPreferences(pref, Context.MODE_PRIVATE)?.edit()?.apply {
-                        clear()
-                        apply()
-                    }
-                }
+                response -> clearSession()
 
-                goToLogin()
             },
             {
-                error ->
+                error -> clearSession()
             }
         )
+
+
+    }
+
+    private fun clearSession() {
+        listOf("auth", "settings", "game").forEach {
+                pref ->
+            activity?.getSharedPreferences(pref, Context.MODE_PRIVATE)?.edit()?.apply {
+                clear()
+                apply()
+            }
+        }
+
+        goToLogin()
     }
 
     fun goToLogin() {
