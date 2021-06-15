@@ -28,4 +28,6 @@
     <string name="game">Game</string>
     <string name="not_playing_game">You\'re not playing a game</string>
     <string name="start_game_instructions">Press the play button to start a new game</string>
+    <string name="answer_problem">Answer</string>
+    <string name="select_an_answer">Select an answer is required</string>
 </resources>

@@ -26,4 +26,6 @@
     <string name="game">Jogo</string>
     <string name="not_playing_game">Você não iniciou um jogo ainda</string>
     <string name="start_game_instructions">Pressione o play para iniciar um novo jogo</string>
+    <string name="answer_problem">Responder</string>
+    <string name="select_an_answer">Selecione uma alternativa</string>
 </resources>

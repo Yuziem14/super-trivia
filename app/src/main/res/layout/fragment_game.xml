@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.game.GameFragment" >
+    tools:context=".fragments.game.GameFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/alertView"
@@ -48,14 +48,14 @@
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:src="@drawable/ic_play"
-        app:tint="@color/white"
         app:backgroundTint="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/infoText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -83,5 +83,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/infoText" />
+
+    <Button
+        android:id="@+id/answerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/answer_problem"
+        app:layout_constraintEnd_toEndOf="@+id/answersList"
+        app:layout_constraintStart_toStartOf="@+id/answersList"
+        app:layout_constraintTop_toBottomOf="@+id/answersList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
