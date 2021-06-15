@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter
 import com.yuziem14.supertrivia.R
 import com.yuziem14.supertrivia.SessionActivity
 import com.yuziem14.supertrivia.dao.CategoryDAO
+import com.yuziem14.supertrivia.dao.GameDAO
 import com.yuziem14.supertrivia.models.Category
 import com.yuziem14.supertrivia.models.Difficulty
 import kotlinx.android.synthetic.main.fragment_settings.view.*
@@ -114,16 +115,32 @@ class SettingsFragment : Fragment() {
         }
     }
 
-    private fun logout() {
-        listOf("auth", "settings").forEach {
-            pref ->
-                activity?.getSharedPreferences(pref, Context.MODE_PRIVATE)?.edit()?.apply {
-                    clear()
-                    apply()
-                }
-        }
+    fun getAuthToken(): String {
+        return context
+            ?.getSharedPreferences("auth", Context.MODE_PRIVATE)
+            ?.getString("token", "")
+            .toString()
+    }
 
-        goToLogin()
+    private fun logout() {
+        GameDAO().destroy(
+            getAuthToken(),
+            {
+                response ->
+                listOf("auth", "settings", "game").forEach {
+                        pref ->
+                    activity?.getSharedPreferences(pref, Context.MODE_PRIVATE)?.edit()?.apply {
+                        clear()
+                        apply()
+                    }
+                }
+
+                goToLogin()
+            },
+            {
+                error ->
+            }
+        )
     }
 
     fun goToLogin() {
