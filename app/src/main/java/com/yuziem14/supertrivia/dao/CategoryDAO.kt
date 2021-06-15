@@ -18,7 +18,7 @@ class CategoryDAO {
     init {
         this.retrofit = Retrofit
             .Builder()
-            .baseUrl("http://192.168.1.78:3000")
+            .baseUrl("https://super-trivia-server.herokuapp.com")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
