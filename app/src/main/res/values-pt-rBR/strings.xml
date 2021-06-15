@@ -28,4 +28,10 @@
     <string name="start_game_instructions">Pressione o play para iniciar um novo jogo</string>
     <string name="answer_problem">Responder</string>
     <string name="select_an_answer">Selecione uma alternativa</string>
+    <string name="correct_answer">Resposta Correta</string>
+    <string name="incorrect_answer">Resposta Incorreta</string>
+    <string name="want_to_continue">Deseja continuar?</string>
+    <string name="score">Pontuação</string>
+    <string name="next_question">Próxima Questão</string>
+    <string name="finish_game">Finalizar Jogo</string>
 </resources>

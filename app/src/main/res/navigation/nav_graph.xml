@@ -18,5 +18,26 @@
         android:id="@+id/gameFragment"
         android:name="com.yuziem14.supertrivia.fragments.game.GameFragment"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/game_to_resume"
+            app:destination="@id/resumeGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resumeGameFragment"
+        android:name="com.yuziem14.supertrivia.fragments.game.ResumeGameFragment"
+        android:label="fragment_resume_game"
+        tools:layout="@layout/fragment_resume_game" >
+        <action
+            android:id="@+id/resume_to_game"
+            app:destination="@id/gameFragment" />
+        <argument
+            android:name="score"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <argument
+            android:name="isCorrect"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
 </navigation>

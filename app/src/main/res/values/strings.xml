@@ -30,4 +30,10 @@
     <string name="start_game_instructions">Press the play button to start a new game</string>
     <string name="answer_problem">Answer</string>
     <string name="select_an_answer">Select an answer is required</string>
+    <string name="correct_answer">Correct Answer</string>
+    <string name="incorrect_answer">Incorrect Answer</string>
+    <string name="want_to_continue">Do you want to continue?</string>
+    <string name="score">Score</string>
+    <string name="next_question">Next Question</string>
+    <string name="finish_game">Finish Game</string>
 </resources>

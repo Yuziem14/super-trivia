@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yuziem14.supertrivia.R
@@ -47,7 +48,7 @@ class GameFragment : Fragment() {
     fun configureRecyclerView() {
         this.inflatedView.answersList.apply {
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-            adapter = this.adapter
+            adapter = AnswerListAdapter()
         }
     }
 
@@ -126,6 +127,8 @@ class GameFragment : Fragment() {
     }
 
     fun loadProblem() {
+        if(!isGameRunning()) return
+
         val existProblem = existPendingProblem()
         if(existProblem) {
             fetchProblem()
@@ -187,6 +190,15 @@ class GameFragment : Fragment() {
                             remove("problem_id")
                             apply()
                         }
+
+                    val isCorrect = response.data.answer.status == "correct"
+                    val data = Bundle()
+                    data.apply {
+                        putLong("score", response.data.answer.score)
+                        putBoolean("isCorrect", isCorrect)
+                    }
+
+                    findNavController().navigate(R.id.game_to_resume, data)
             },
             {
                     error ->
