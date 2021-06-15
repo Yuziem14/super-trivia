@@ -39,5 +39,17 @@
             android:name="isCorrect"
             app:argType="boolean"
             android:defaultValue="false" />
+        <action
+            android:id="@+id/resume_to_gameover"
+            app:destination="@id/gameOverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.yuziem14.supertrivia.fragments.game.GameOverFragment"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/gameover_to_settings"
+            app:destination="@id/settingsFragment" />
     </fragment>
 </navigation>

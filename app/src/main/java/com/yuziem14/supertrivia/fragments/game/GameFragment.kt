@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.fragment_game.view.*
 
 class GameFragment : Fragment() {
     private lateinit var inflatedView: View
-    private lateinit var adapter: AnswerListAdapter
+    private var adapter: AnswerListAdapter = AnswerListAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +59,7 @@ class GameFragment : Fragment() {
             playButton.visibility = if(isRunning) View.GONE else View.VISIBLE
             alertView.visibility = if(isRunning) View.GONE else View.VISIBLE
             answersList.visibility = if(isRunning) View.VISIBLE else View.GONE
+            answerButton.visibility = if(isRunning) View.VISIBLE else View.GONE
         }
     }
 
@@ -180,7 +181,7 @@ class GameFragment : Fragment() {
 
         ProblemDAO().answer(
             getAuthToken(),
-            this.adapter.getSelectedAnswer()!!.order!!,
+            answer.order!!,
             {
                     response ->
                     context

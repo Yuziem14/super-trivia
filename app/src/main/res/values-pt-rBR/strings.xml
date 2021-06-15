@@ -34,4 +34,8 @@
     <string name="score">Pontuação</string>
     <string name="next_question">Próxima Questão</string>
     <string name="finish_game">Finalizar Jogo</string>
+    <string name="game_over">Jogo Finalizado</string>
+    <string name="started_at">Iniciado em</string>
+    <string name="finished_at">Finalizado em:</string>
+    <string name="conclude">Concluir</string>
 </resources>

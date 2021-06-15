@@ -36,4 +36,8 @@
     <string name="score">Score</string>
     <string name="next_question">Next Question</string>
     <string name="finish_game">Finish Game</string>
+    <string name="game_over">Game Over</string>
+    <string name="started_at">Started At</string>
+    <string name="finished_at">Finished At</string>
+    <string name="conclude">Conclude</string>
 </resources>

@@ -26,8 +26,12 @@ class ResumeGameFragment : Fragment() {
     }
 
     fun setup(score: Long, isCorrect: Boolean) {
-        this.inflatedView.answerStatus.text = if(isCorrect) getString(R.string.correct_answer) else getString(R.string.incorrect_answer)
+        this.inflatedView.answerStatus.text =
+            if (isCorrect) getString(R.string.correct_answer) else getString(R.string.incorrect_answer)
         this.inflatedView.scoreText.text = "${getString(R.string.score)}: ${score.toString()}"
-        this.inflatedView.nextButton.setOnClickListener { findNavController().navigate(R.id.resume_to_game) }
+        this.inflatedView.nextButton.setOnClickListener {
+            findNavController().navigate(R.id.resume_to_game)
+        }
+        this.inflatedView.finishButton.setOnClickListener { findNavController().navigate(R.id.resume_to_gameover) }
     }
 }
